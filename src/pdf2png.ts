@@ -1,4 +1,4 @@
-import * as Canvas from 'canvas'
+import * as Canvas from '@napi-rs/canvas'
 import * as assert from 'assert'
 import * as fs from 'fs'
 import * as path from 'path'
@@ -23,7 +23,7 @@ function convertFromPxToMm(sizePx: number, dpi: number): number {
 
 type CanvasAndContext = {
   canvas: Canvas.Canvas
-  context: Canvas.CanvasRenderingContext2D
+  context: Canvas.SKRSContext2D
 }
 
 class NodeCanvasFactory {
